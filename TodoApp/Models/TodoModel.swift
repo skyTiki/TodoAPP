@@ -9,7 +9,7 @@ import Foundation
 
 
 final class TodoModel: ObservableObject {
-    @Published var taskList: [Task] = []
+    @Published var taskList: [Task] = [.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo)]
 }
 
 struct Task: Identifiable {
@@ -25,6 +25,6 @@ struct Task: Identifiable {
     }
 }
 
-enum TaskStatus {
+enum TaskStatus: String,CaseIterable {
     case Todo,Doing,Done
 }
