@@ -12,7 +12,7 @@ struct ContentView: View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color("Main"), Color("Accent1")]), startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea(.all)
-
+            
             Login()
         }
     }
@@ -21,6 +21,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(TodoModel())
         
     }
 }

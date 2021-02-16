@@ -18,5 +18,6 @@ struct TodoList: View {
 struct TodoList_Previews: PreviewProvider {
     static var previews: some View {
         TodoList()
+            .environmentObject(TodoModel())
     }
 }

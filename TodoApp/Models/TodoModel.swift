@@ -12,7 +12,8 @@ final class TodoModel: ObservableObject {
     @Published var taskList: [Task] = []
 }
 
-struct Task {
+struct Task: Identifiable {
+    let id = UUID()
     let name: String
     let description: String
     let status: TaskStatus

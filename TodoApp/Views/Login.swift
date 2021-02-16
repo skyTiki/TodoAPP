@@ -12,7 +12,7 @@ struct Login: View {
     @State private var userId = ""
     @State private var password = ""
     @State private var rePassword = ""
-
+    
     
     var body: some View {
         
@@ -24,7 +24,7 @@ struct Login: View {
                 .frame(width: 160, height: 160)
                 .offset(y: -50)
                 .padding(.bottom, -30)
-                
+            
             VStack {
                 HStack {
                     Image(systemName: "person")
