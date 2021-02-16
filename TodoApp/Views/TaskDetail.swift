@@ -55,12 +55,15 @@ struct TaskDetail: View {
             
             
         }
+        .navigationBarTitleDisplayMode(.inline)
         .background(Color("TaskDetailBackground"))
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 
 struct TaskDetail_Previews: PreviewProvider {
     static var previews: some View {
         TaskDetail(task: .init(name: "〜する", description: "あああああああああ", status: .Doing))
+            .environmentObject(TodoModel())
     }
 }
