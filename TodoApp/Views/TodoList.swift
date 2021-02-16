@@ -17,17 +17,18 @@ struct TodoList: View {
                 TaskStatusTabBar(selectedTab: selectedTab)
                 List {
                     ForEach(todoModel.taskList) { task in
-                        HStack {
-                            Text(task.name)
-                                .font(.title3)
-                                .fontWeight(.bold)
-                                .foregroundColor(Color("TextColor"))
-                            
-                            
-                            Text(task.description)
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                                .padding(.leading, 6)
+                        NavigationLink(destination: TaskDetail(task: task)){
+                            HStack {
+                                Text(task.name)
+                                    .font(.title3)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color("TextColor"))
+                                
+                                Text(task.description)
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                                    .padding(.leading, 6)
+                            }
                         }
                     }
                 }
@@ -39,11 +40,9 @@ struct TodoList: View {
                     Text("+")
                         .font(.title2)
                         .foregroundColor(.white)
-                        .frame(width: 50, height: 50)
+                        .frame(width: 30, height: 30)
                         .background(Color("Accent2"))
-                        .cornerRadius(25)
-                        .offset(y: 25)
-                        .padding(.bottom, 25)
+                        .cornerRadius(15)
                 })
             }
         }

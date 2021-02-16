@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct TaskDetail: View {
-    @Binding var task: Task
+    @EnvironmentObject var todoModel: TodoModel
+    var task: Task
     
     var body: some View {
         VStack {
@@ -69,6 +70,6 @@ struct TaskDetail: View {
 
 struct TaskDetail_Previews: PreviewProvider {
     static var previews: some View {
-        TaskDetail(task: .constant(.init(name: "〜する", description: "あああああああああ", status: .Doing)))
+        TaskDetail(task: .init(name: "〜する", description: "あああああああああ", status: .Doing))
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 
 
 final class TodoModel: ObservableObject {
-    @Published var taskList: [Task] = [.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo),.init(name: "タスク１", description: "説明", status: .Todo)]
+    @Published var taskList: [Task] = createTaskList()
 }
 
 struct Task: Identifiable {
@@ -28,3 +28,13 @@ struct Task: Identifiable {
 enum TaskStatus: String,CaseIterable {
     case Todo,Doing,Done
 }
+
+func createTaskList() -> [Task] {
+    var taskList: [Task] = []
+    for num in 0...30 {
+        let task: Task = .init(name: "タスク\(num)", description: "タスク\(num)の説明です", status: num < 10 ? .Todo : .Doing)
+        taskList.append(task)
+    }
+    return taskList
+}
+
