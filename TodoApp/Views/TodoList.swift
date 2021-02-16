@@ -11,12 +11,18 @@ struct TodoList: View {
     @EnvironmentObject var todoModel: TodoModel
     @State var selectedTab: TaskStatus
     
+    var filteredTaskList: [Task] {
+        todoModel.taskList.filter {
+            $0.status == selectedTab
+        }
+    }
+    
     var body: some View {
         NavigationView {
             VStack{
                 TaskStatusTabBar(selectedTab: $selectedTab)
                 List {
-                    ForEach(todoModel.taskList) { task in
+                    ForEach(filteredTaskList) { task in
                         NavigationLink(destination: TaskDetail(task: task)){
                             HStack {
                                 Text(task.name)
