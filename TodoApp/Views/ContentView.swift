@@ -11,7 +11,8 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color("Main"), Color("Accent1")]), startPoint: .top, endPoint: .bottom)
-            
+                .ignoresSafeArea(.all)
+
             Login()
         }
     }
