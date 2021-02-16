@@ -21,7 +21,7 @@ struct TodoList: View {
                             Text(task.name)
                                 .font(.title3)
                                 .fontWeight(.bold)
-                                .foregroundColor(.primary)
+                                .foregroundColor(Color("TextColor"))
                             
                             
                             Text(task.description)

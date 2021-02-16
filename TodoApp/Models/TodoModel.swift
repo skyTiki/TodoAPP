@@ -14,9 +14,9 @@ final class TodoModel: ObservableObject {
 
 struct Task: Identifiable {
     let id = UUID()
-    let name: String
-    let description: String
-    let status: TaskStatus
+    var name: String
+    var description: String
+    var status: TaskStatus
     
     init(name: String, description: String, status: TaskStatus) {
         self.name = name

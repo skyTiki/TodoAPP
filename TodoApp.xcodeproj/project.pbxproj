@@ -14,6 +14,7 @@
 		2A378F1925DB4EE800C69C39 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F1825DB4EE800C69C39 /* Login.swift */; };
 		2A378F1D25DB5C2600C69C39 /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F1C25DB5C2600C69C39 /* TodoList.swift */; };
 		2A378F2125DB5C4C00C69C39 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F2025DB5C4C00C69C39 /* TodoModel.swift */; };
+		2A5612B825DB8CC0001D7A75 /* TaskDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5612B725DB8CC0001D7A75 /* TaskDetail.swift */; };
 		2A81A37225DB69B200DFDEB0 /* TaskStatusTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A81A37125DB69B200DFDEB0 /* TaskStatusTabBar.swift */; };
 		2ADFCDBD25DB82DB00B9C7A5 /* StatusTabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFCDBC25DB82DB00B9C7A5 /* StatusTabButton.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		2A378F1825DB4EE800C69C39 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		2A378F1C25DB5C2600C69C39 /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 		2A378F2025DB5C4C00C69C39 /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
+		2A5612B725DB8CC0001D7A75 /* TaskDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetail.swift; sourceTree = "<group>"; };
 		2A81A37125DB69B200DFDEB0 /* TaskStatusTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStatusTabBar.swift; sourceTree = "<group>"; };
 		2ADFCDBC25DB82DB00B9C7A5 /* StatusTabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTabButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 				2A378F1825DB4EE800C69C39 /* Login.swift */,
 				2A378F1C25DB5C2600C69C39 /* TodoList.swift */,
 				2A81A37125DB69B200DFDEB0 /* TaskStatusTabBar.swift */,
+				2A5612B725DB8CC0001D7A75 /* TaskDetail.swift */,
 				2ADFCDBF25DB865E00B9C7A5 /* Helpers */,
 			);
 			path = Views;
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A378F1925DB4EE800C69C39 /* Login.swift in Sources */,
+				2A5612B825DB8CC0001D7A75 /* TaskDetail.swift in Sources */,
 				2A378F0A25DB4ECA00C69C39 /* ContentView.swift in Sources */,
 				2ADFCDBD25DB82DB00B9C7A5 /* StatusTabButton.swift in Sources */,
 				2A81A37225DB69B200DFDEB0 /* TaskStatusTabBar.swift in Sources */,
