@@ -12,10 +12,9 @@ struct Login: View {
     @State private var userId = ""
     @State private var password = ""
     @State private var rePassword = ""
-    
+    @State private var isShowingTodoList = false
     
     var body: some View {
-        
         VStack {
             
             Image("TodoIcon")
@@ -62,9 +61,8 @@ struct Login: View {
             .cornerRadius(25)
             .padding(.horizontal,10)
             
-            
             Button(action: {
-                
+                isShowingTodoList = true
             }) {
                 Text("Login")
                     .fontWeight(.bold)
@@ -76,6 +74,9 @@ struct Login: View {
             .cornerRadius(40)
             .offset(y: -17)
             .padding(.bottom, -17)
+            .fullScreenCover(isPresented: $isShowingTodoList, content: {
+                TodoList(selectedTab: .Doing)
+            })
         }
         
     }
@@ -84,5 +85,6 @@ struct Login: View {
 struct Login_Previews: PreviewProvider {
     static var previews: some View {
         Login()
+            .environmentObject(TodoModel())
     }
 }
