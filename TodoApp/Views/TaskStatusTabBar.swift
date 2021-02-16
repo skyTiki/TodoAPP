@@ -18,7 +18,7 @@ struct TaskStatusTabBar: View {
             }
         }
         .frame(width: 300, height: 50)
-        .background(Color("Main"))
+        .background(Color("TabBackGround"))
         .cornerRadius(25)
     }
 }

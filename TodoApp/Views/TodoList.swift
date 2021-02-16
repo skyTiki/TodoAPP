@@ -9,10 +9,12 @@ import SwiftUI
 
 struct TodoList: View {
     @EnvironmentObject var todoModel: TodoModel
+    @State var selectedTab: TaskStatus
     
     var body: some View {
         NavigationView {
             VStack{
+                TaskStatusTabBar(selectedTab: selectedTab)
                 List {
                     ForEach(todoModel.taskList) { task in
                         HStack {
@@ -29,6 +31,7 @@ struct TodoList: View {
                         }
                     }
                 }
+                .cornerRadius(20)
                 .navigationTitle("TodoList")
                 .navigationBarItems(trailing: Button(action: {
                     
@@ -36,9 +39,11 @@ struct TodoList: View {
                     Text("+")
                         .font(.title2)
                         .foregroundColor(.white)
-                        .frame(width: 35, height: 35)
+                        .frame(width: 50, height: 50)
                         .background(Color("Accent2"))
-                        .cornerRadius(18)
+                        .cornerRadius(25)
+                        .offset(y: 25)
+                        .padding(.bottom, 25)
                 })
             }
         }
@@ -47,7 +52,7 @@ struct TodoList: View {
 
 struct TodoList_Previews: PreviewProvider {
     static var previews: some View {
-        TodoList()
+        TodoList(selectedTab: TaskStatus.Doing)
             .environmentObject(TodoModel())
     }
 }
