@@ -2,7 +2,7 @@
 //  TaskDetail.swift
 //  TodoApp
 //
-//  Created by S-wayMock2 on 2021/02/16.
+//  Created by tichige on 2021/02/16.
 //
 
 import SwiftUI
