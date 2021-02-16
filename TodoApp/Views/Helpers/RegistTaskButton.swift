@@ -1,5 +1,5 @@
 //
-//  UpdateTaskDetailButton.swift
+//  RegistTaskButton.swift
 //  TodoApp
 //
 //  Created by S-wayMock2 on 2021/02/16.
@@ -7,13 +7,15 @@
 
 import SwiftUI
 
-struct UpdateTaskDetailButton: View {
-    @Binding var beforeValueTask: Task
-    let afterValueTask: Task
-    
+struct RegistTaskButton: View {
+    @Binding var todoList: [Task]
+    let task: Task
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
+        
         Button(action: {
-            beforeValueTask = afterValueTask
+            todoList.append(task)
+            self.presentationMode.wrappedValue.dismiss()
         }, label: {
             Text("登録")
                 .font(.title3)
@@ -28,8 +30,9 @@ struct UpdateTaskDetailButton: View {
     }
 }
 
-struct UpdateTaskDetailButton_Previews: PreviewProvider {
+
+struct RegistTaskButton_Previews: PreviewProvider {
     static var previews: some View {
-        UpdateTaskDetailButton(beforeValueTask: .constant(.init(name: "", description: "", status: .Doing)), afterValueTask: .init(name: "", description: "", status: .Doing))
+        RegistTaskButton(todoList: .constant(TodoModel().taskList), task: .init(name: "追加タスク", description: "追加タスクの説明", status: .Todo))
     }
 }

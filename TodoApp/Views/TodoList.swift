@@ -10,6 +10,7 @@ import SwiftUI
 struct TodoList: View {
     @EnvironmentObject var todoModel: TodoModel
     @State var selectedTab: TaskStatus
+    @State private var isShowingSheet = false
     
     var filteredTaskList: [Task] {
         todoModel.taskList.filter {
@@ -41,7 +42,7 @@ struct TodoList: View {
                 .cornerRadius(20)
                 .navigationTitle("TodoList")
                 .navigationBarItems(trailing: Button(action: {
-                    
+                    isShowingSheet = true
                 }) {
                     Text("+")
                         .font(.title2)
@@ -52,6 +53,10 @@ struct TodoList: View {
                 })
             }
         }
+        .sheet(isPresented: $isShowingSheet, content: {
+            let task: Task = .init(name: "", description: "", status: .Todo)
+            TaskDetail(task: task)
+        })
     }
 }
 

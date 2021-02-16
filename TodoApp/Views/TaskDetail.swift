@@ -11,7 +11,11 @@ struct TaskDetail: View {
     @EnvironmentObject var todoModel: TodoModel
     @State var task: Task
     var taskIndex: Int {
-        todoModel.taskList.firstIndex(where: { $0.id == task.id })!
+        if let taskIndex = todoModel.taskList.firstIndex(where: { $0.id == task.id }) {
+            return taskIndex
+        } else {
+            return todoModel.taskList.count + 1
+        }
     }
     
     var body: some View {
@@ -19,7 +23,12 @@ struct TaskDetail: View {
             HStack {
                 Spacer()
                 
-                UpdateTaskDetailButton(beforeValueTask: $todoModel.taskList[taskIndex], afterValueTask: task)
+                if taskIndex > todoModel.taskList.count {
+                    RegistTaskButton(todoList: $todoModel.taskList, task: task)
+                } else {
+                    UpdateTaskButton(beforeValueTask: $todoModel.taskList[taskIndex], afterValueTask: task)
+                }
+                
             }
             
             TaskStatusTabBar(selectedTab: $task.status)
