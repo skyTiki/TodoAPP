@@ -14,7 +14,7 @@ struct TodoList: View {
     var body: some View {
         NavigationView {
             VStack{
-                TaskStatusTabBar(selectedTab: selectedTab)
+                TaskStatusTabBar(selectedTab: $selectedTab)
                 List {
                     ForEach(todoModel.taskList) { task in
                         NavigationLink(destination: TaskDetail(task: task)){

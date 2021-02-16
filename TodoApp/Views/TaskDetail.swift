@@ -9,29 +9,20 @@ import SwiftUI
 
 struct TaskDetail: View {
     @EnvironmentObject var todoModel: TodoModel
-    var task: Task
+    @State var task: Task
+    var taskIndex: Int {
+        todoModel.taskList.firstIndex(where: { $0.id == task.id })!
+    }
     
     var body: some View {
         VStack {
             HStack {
                 Spacer()
                 
-                Button(action: {
-                    
-                }, label: {
-                    Text("登録")
-                        .font(.title3)
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                        .frame(width: 100, height: 60)
-                        .background(Color("UpdateButton"))
-                        .cornerRadius(50)
-                })
-                .padding(.trailing)
-                .padding(.top)
+                UpdateTaskDetailButton(beforeValueTask: $todoModel.taskList[taskIndex], afterValueTask: task)
             }
             
-            TaskStatusTabBar(selectedTab: task.status)
+            TaskStatusTabBar(selectedTab: $task.status)
             
             HStack {
                 
@@ -40,7 +31,7 @@ struct TaskDetail: View {
                     .padding(.top)
                 Spacer()
             }
-            TextField("タスク名", text: .constant(task.name))
+            TextField("タスク名", text: $task.name)
                 .frame(width: UIScreen.main.bounds.size.width - 50, height: 40)
                 .font(.system(size: 19, weight: .bold))
                 .padding(.horizontal)
@@ -53,7 +44,7 @@ struct TaskDetail: View {
                     .padding(.top)
                 Spacer()
             }
-            TextField("タスクの説明", text: .constant(task.description))
+            TextField("タスクの説明", text: $task.description)
                 .frame(width: UIScreen.main.bounds.size.width - 50, height: 80)
                 .font(.system(size: 17, weight: .regular))
                 .padding(.horizontal)

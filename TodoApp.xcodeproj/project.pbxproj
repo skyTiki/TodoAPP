@@ -16,6 +16,7 @@
 		2A378F2125DB5C4C00C69C39 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F2025DB5C4C00C69C39 /* TodoModel.swift */; };
 		2A5612B825DB8CC0001D7A75 /* TaskDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5612B725DB8CC0001D7A75 /* TaskDetail.swift */; };
 		2A81A37225DB69B200DFDEB0 /* TaskStatusTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A81A37125DB69B200DFDEB0 /* TaskStatusTabBar.swift */; };
+		2A96DE3D25DBA4A900B96001 /* UpdateTaskDetailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96DE3C25DBA4A900B96001 /* UpdateTaskDetailButton.swift */; };
 		2ADFCDBD25DB82DB00B9C7A5 /* StatusTabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFCDBC25DB82DB00B9C7A5 /* StatusTabButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		2A378F2025DB5C4C00C69C39 /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		2A5612B725DB8CC0001D7A75 /* TaskDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetail.swift; sourceTree = "<group>"; };
 		2A81A37125DB69B200DFDEB0 /* TaskStatusTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStatusTabBar.swift; sourceTree = "<group>"; };
+		2A96DE3C25DBA4A900B96001 /* UpdateTaskDetailButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTaskDetailButton.swift; sourceTree = "<group>"; };
 		2ADFCDBC25DB82DB00B9C7A5 /* StatusTabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTabButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				2ADFCDBC25DB82DB00B9C7A5 /* StatusTabButton.swift */,
+				2A96DE3C25DBA4A900B96001 /* UpdateTaskDetailButton.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				2A378F0A25DB4ECA00C69C39 /* ContentView.swift in Sources */,
 				2ADFCDBD25DB82DB00B9C7A5 /* StatusTabButton.swift in Sources */,
 				2A81A37225DB69B200DFDEB0 /* TaskStatusTabBar.swift in Sources */,
+				2A96DE3D25DBA4A900B96001 /* UpdateTaskDetailButton.swift in Sources */,
 				2A378F0825DB4ECA00C69C39 /* TodoAppApp.swift in Sources */,
 				2A378F2125DB5C4C00C69C39 /* TodoModel.swift in Sources */,
 				2A378F1D25DB5C2600C69C39 /* TodoList.swift in Sources */,

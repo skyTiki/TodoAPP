@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TaskStatusTabBar: View {
-    @State var selectedTab: TaskStatus
+    @Binding var selectedTab: TaskStatus
     @Namespace var namespace
     
     var body: some View {
@@ -25,7 +25,7 @@ struct TaskStatusTabBar: View {
 
 struct TaskStatusTabBar_Previews: PreviewProvider {
     static var previews: some View {
-        TaskStatusTabBar(selectedTab: .Doing)
+        TaskStatusTabBar(selectedTab: .constant(.Doing))
             .previewLayout(.fixed(width: 300, height: 50))
     }
 }
