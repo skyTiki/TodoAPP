@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A378F0825DB4ECA00C69C39 /* TodoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F0725DB4ECA00C69C39 /* TodoAppApp.swift */; };
+		2A378F0825DB4ECA00C69C39 /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F0725DB4ECA00C69C39 /* TodoApp.swift */; };
 		2A378F0A25DB4ECA00C69C39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A378F0925DB4ECA00C69C39 /* ContentView.swift */; };
 		2A378F0C25DB4ECD00C69C39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A378F0B25DB4ECD00C69C39 /* Assets.xcassets */; };
 		2A378F0F25DB4ECD00C69C39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A378F0E25DB4ECD00C69C39 /* Preview Assets.xcassets */; };
@@ -23,7 +23,7 @@
 
 /* Begin PBXFileReference section */
 		2A378F0425DB4ECA00C69C39 /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A378F0725DB4ECA00C69C39 /* TodoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppApp.swift; sourceTree = "<group>"; };
+		2A378F0725DB4ECA00C69C39 /* TodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoApp.swift; sourceTree = "<group>"; };
 		2A378F0925DB4ECA00C69C39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2A378F0B25DB4ECD00C69C39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A378F0E25DB4ECD00C69C39 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		2A378F0625DB4ECA00C69C39 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
-				2A378F0725DB4ECA00C69C39 /* TodoAppApp.swift */,
+				2A378F0725DB4ECA00C69C39 /* TodoApp.swift */,
 				2A378F1F25DB5C3B00C69C39 /* Models */,
 				2A378F1725DB4EDA00C69C39 /* Views */,
 				2A378F0B25DB4ECD00C69C39 /* Assets.xcassets */,
@@ -193,7 +193,7 @@
 				2A96DE4025DBAE7D00B96001 /* RegistTaskButton.swift in Sources */,
 				2A81A37225DB69B200DFDEB0 /* TaskStatusTabBar.swift in Sources */,
 				2A96DE3D25DBA4A900B96001 /* UpdateTaskButton.swift in Sources */,
-				2A378F0825DB4ECA00C69C39 /* TodoAppApp.swift in Sources */,
+				2A378F0825DB4ECA00C69C39 /* TodoApp.swift in Sources */,
 				2A378F2125DB5C4C00C69C39 /* TodoModel.swift in Sources */,
 				2A378F1D25DB5C2600C69C39 /* TodoList.swift in Sources */,
 			);
@@ -325,7 +325,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TodoApp/Preview Content\"";
-				DEVELOPMENT_TEAM = CYWJ8XR6PA;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TodoApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -333,7 +333,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tichige.com.TodoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = skyTiki.com.TodoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -347,7 +347,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TodoApp/Preview Content\"";
-				DEVELOPMENT_TEAM = CYWJ8XR6PA;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TodoApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -355,7 +355,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tichige.com.TodoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = skyTiki.com.TodoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

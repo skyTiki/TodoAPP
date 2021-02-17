@@ -2,7 +2,7 @@
 //  TodoModel.swift
 //  TodoApp
 //
-//  Created by tichige on 2021/02/16.
+//  Created by skytiki on 2021/02/16.
 //
 
 import Foundation
