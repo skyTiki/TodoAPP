@@ -1,6 +1,7 @@
 # TodoAPP
 
 SwiftUIで作成したTodoアプリ
+※SwiftUI勉強用に作ったので、認証やDB保存処理などは実装していません。
 
 ## 画面イメージ
 
